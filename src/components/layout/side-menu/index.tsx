@@ -5,7 +5,7 @@ import LinksWrapper from './LinksWrapper';
 
 export default function SideMenu() {
   return (
-    <div className='flex flex-col gap-1 sticky top-3 shadow-sm border-2 border-solid border-black-2 rounded-xl py-4 px-3'>
+    <div className='bg-white flex flex-col gap-1 sticky top-3 shadow-sm border-2 border-solid border-black-2 rounded-xl py-4 px-3'>
       <span className='px-3 pb-3'>Hey John Doe 👋🏻</span>
       {links.map(link => <React.Fragment key={link.label}>
         {link.links ? <LinksWrapper label={link.label} links={link.links} active={link.active} Icon={link.Icon} /> : (

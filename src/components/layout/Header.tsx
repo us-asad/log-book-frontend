@@ -6,7 +6,7 @@ import { FaUserAlt } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <header className='flex items-center justify-between shadow-sm border-2 border-solid border-black-2 rounded-xl py-4 px-6'>
+    <header className='bg-white flex items-center justify-between shadow-sm border-2 border-solid border-black-2 rounded-xl py-4 px-6'>
       <Logo size="lg" />
       <div className='flex items-center gap-4'>
         <Select
