@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className='p-3 pb-0'>
         <Header />
       </div>
-      <div className='p-3 flex gap-3'>
+      <div className='p-3 flex gap-3 h-[calc(100vh-110px)]'>
         <div className='w-80'>
           <SideMenu />
         </div>
