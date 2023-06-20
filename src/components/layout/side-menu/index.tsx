@@ -7,12 +7,17 @@ import { GoHistory } from "react-icons/go";
 import { MdOutlineManageHistory, MdOutlinePeopleAlt, MdOutlineCellWifi, MdGpsFixed } from "react-icons/md";
 import LinksWrapper from './LinksWrapper';
 import LinkItem from './LinkItem';
+import { HiChevronDown } from "react-icons/hi";
+import { Button } from 'antd';
 
 export default function SideMenu() {
 
   return (
     <div className='bg-white flex flex-col gap-1 sticky top-3 shadow-sm border-2 border-solid border-black-2 rounded-xl py-4 px-3'>
-      <span className='px-3 pb-3'>Hey John Doe 👋🏻</span>
+      <Button className='flex items-center justify-between '>
+        <span>John Doe</span>
+        <HiChevronDown className="text-xl" />
+      </Button>
       {links.map(item => (
         <React.Fragment key={item.label}>
           {item.links

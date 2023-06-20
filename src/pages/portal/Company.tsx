@@ -1,19 +1,10 @@
 import React from 'react';
-import { Button, } from 'antd';
-import { IoMdRefresh } from 'react-icons/io';
+import PageHeader from '../../components/common/PageHeader';
 
 export default function Company() {
 	return (
 		<div>
-			<div className="flex items-center justify-between">
-				<h2 className="text-xl font-medium">Company Details</h2>
-				<div className="flex items-center gap-2">
-					<Button className="flex items-center gap-1 group">
-						<span>Refresh</span>
-						<IoMdRefresh className="text-lg text-black-4 group-hover:text-inherit duration-50" />
-					</Button>
-				</div>
-			</div>
+			<PageHeader title="Company Details" />
 			<div className="overflow-auto max-h-[calc(100vh-200px)] border border-black-2 border-solid rounded-md mt-4 w-full">
 				<table className="w-full border-collapse">
 					<tbody>

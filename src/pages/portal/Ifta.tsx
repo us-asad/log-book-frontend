@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import { Button, Tabs } from 'antd';
-import { IoMdRefresh } from 'react-icons/io';
+import { Tabs } from 'antd';
 import Generate from '../../components/ifta/Generate';
 import Reports from '../../components/ifta/Reports';
+import PageHeader from '../../components/common/PageHeader';
 
 export default function Ifta() {
 	const tabItems = useMemo(
@@ -15,15 +15,7 @@ export default function Ifta() {
 
 	return (
 		<div>
-			<div className="flex items-center justify-between">
-				<h2 className="text-xl font-medium">IFTA Reports</h2>
-				<div className="flex items-center gap-2">
-					<Button className="flex items-center gap-1 group">
-						<span>Refresh</span>
-						<IoMdRefresh className="text-lg text-black-4 group-hover:text-inherit duration-50" />
-					</Button>
-				</div>
-			</div>
+			<PageHeader title="IFTA Reports" />
 			<Tabs items={tabItems} />
 		</div>
 	);

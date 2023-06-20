@@ -1,0 +1,15 @@
+export { default as Company } from "./Company";
+export { default as Drivers } from "./Drivers";
+export { default as Dvirs } from "./Dvirs";
+export { default as Idling } from "./Idling";
+export { default as Ifta } from "./Ifta";
+export { default as Logs } from "./Logs";
+export { default as MaintenanceHistory } from "./MaintenanceHistory";
+export { default as MaintenanceReminders } from "./MaintenanceReminders";
+export { default as ManageDrivers } from "./ManageDrivers";
+export { default as ManageELDs } from "./ManageElds";
+export { default as ManageGroups } from "./ManageGroups";
+export { default as ManageTrackers } from "./ManageTrackers";
+export { default as ManageVehicles } from "./ManageVehicles";
+export { default as UnidentifiedEvents } from "./UnidentifiedEvents";
+export { default as Vehicles } from "./Vehicles";

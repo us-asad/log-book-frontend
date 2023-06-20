@@ -1,20 +1,12 @@
 import React from 'react';
-import { Button, Input } from 'antd';
-import { IoMdRefresh } from 'react-icons/io';
+import { Input } from 'antd';
 import { MdSort } from 'react-icons/md';
+import PageHeader from '../../components/common/PageHeader';
 
 export default function ManageELDs() {
 	return (
 		<div>
-			<div className="flex items-center justify-between">
-				<h2 className="text-xl font-medium">Manage ELDs</h2>
-				<div className="flex items-center gap-2">
-					<Button className="flex items-center gap-1 group">
-						<span>Refresh</span>
-						<IoMdRefresh className="text-lg text-black-4 group-hover:text-inherit duration-50" />
-					</Button>
-				</div>
-			</div>
+			<PageHeader title="Manage ELDs" />
 			<div className="overflow-auto max-h-[calc(100vh-200px)] border border-black-2 border-solid rounded-md mt-4 w-full">
 				<table className="w-full min-w-max border-collapse">
 					<thead className="text-sm">

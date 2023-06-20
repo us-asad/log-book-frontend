@@ -1,28 +1,27 @@
 import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
-import { IoMdCloudDownload, IoMdRefresh } from 'react-icons/io';
+import { IoMdCloudDownload } from 'react-icons/io';
 import { MdCloudUpload } from 'react-icons/md';
+import PageHeader from '../../components/common/PageHeader';
 
 export default function Logs() {
 	return (
 		<div>
-			<div className="flex items-center justify-between">
-				<h2 className="text-xl font-medium">Logs</h2>
-				<div className="flex items-center gap-2">
-					<Button className="flex items-center gap-1 group">
-						<span>Send Output File</span>
-						<MdCloudUpload className="text-lg text-black-4 group-hover:text-inherit duration-50" />
-					</Button>
-					<Button className="flex items-center gap-1 group">
-						<span>Download</span>
-						<IoMdCloudDownload className="text-lg text-black-4 group-hover:text-inherit duration-50" />
-					</Button>
-					<Button className="flex items-center gap-1 group">
-						<span>Refresh</span>
-						<IoMdRefresh className="text-lg text-black-4 group-hover:text-inherit duration-50" />
-					</Button>
-				</div>
-			</div>
+			<PageHeader
+				title="Logs"
+				buttons={
+					<>
+						<Button className="flex items-center gap-1 group">
+							<span>Send Output File</span>
+							<MdCloudUpload className="text-lg text-black-4 group-hover:text-inherit duration-50" />
+						</Button>
+						<Button className="flex items-center gap-1 group">
+							<span>Download</span>
+							<IoMdCloudDownload className="text-lg text-black-4 group-hover:text-inherit duration-50" />
+						</Button>
+					</>
+				}
+			/>
 			<div className="flex gap-2 mt-8">
 				<DatePicker />
 				<DatePicker placeholder="End Date" />
@@ -101,13 +100,17 @@ export default function Logs() {
 									00.00
 								</td>
 								<td className="border border-black-2 border-solid px-3 py-2"></td>
-								<td className="border border-black-2 border-solid px-3 py-2">Not Crtified</td>
+								<td className="border border-black-2 border-solid px-3 py-2">
+									Not Crtified
+								</td>
 							</tr>
 						))}
 					</tbody>
 				</table>
 			</div>
-			<Button type="link" className="mx-auto block mt-2">Load More</Button>
+			<Button type="link" className="mx-auto block mt-2">
+				Load More
+			</Button>
 		</div>
 	);
 }

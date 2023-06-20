@@ -1,21 +1,13 @@
 import React from 'react';
-import { Button, Input, Select } from 'antd';
-import { IoMdRefresh } from 'react-icons/io';
+import { Input, Select } from 'antd';
 import { MdSort } from 'react-icons/md';
 import { AiFillAndroid } from 'react-icons/ai';
+import PageHeader from '../../components/common/PageHeader';
 
 export default function ManageDrivers() {
 	return (
 		<div>
-			<div className="flex items-center justify-between">
-				<h2 className="text-xl font-medium">Manage Drivers</h2>
-				<div className="flex items-center gap-2">
-					<Button className="flex items-center gap-1 group">
-						<span>Refresh</span>
-						<IoMdRefresh className="text-lg text-black-4 group-hover:text-inherit duration-50" />
-					</Button>
-				</div>
-			</div>
+			<PageHeader title="Manage Drivers" />
 			<div className="overflow-auto max-h-[calc(100vh-200px)] border border-black-2 border-solid rounded-md mt-4 w-full">
 				<table className="w-max border-collapse">
 					<thead className="text-sm">
@@ -58,8 +50,8 @@ export default function ManageDrivers() {
 								<div className="flex flex-col gap-1">
 									<span>OS</span>
 									<Select
-                    size="small"
-                    className="w-28"
+										size="small"
+										className="w-28"
 										defaultValue="all"
 										options={[
 											{ value: 'all', labale: 'All' },
@@ -76,8 +68,8 @@ export default function ManageDrivers() {
 										<MdSort />
 									</button>
 									<Select
-                    size="small"
-                    className="w-28"
+										size="small"
+										className="w-28"
 										defaultValue="all"
 										options={[
 											{ value: 'all', labale: 'All' },
@@ -112,7 +104,7 @@ export default function ManageDrivers() {
 									2.22.25
 								</td>
 								<td className="border border-black-2 border-solid px-3 py-2">
-									<div className='flex items-center gap-1'>
+									<div className="flex items-center gap-1">
 										<AiFillAndroid className="text-green-600 text-lg" />
 										<span>13</span>
 									</div>
