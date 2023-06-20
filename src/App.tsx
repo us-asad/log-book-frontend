@@ -11,6 +11,7 @@ import UnidentifiedEvents from "./pages/portal/UnidentifiedEvents";
 import Dvirs from "./pages/portal/Dvirs";
 import Ifta from "./pages/portal/Ifta";
 import Idling from "./pages/portal/Idling";
+import MaintenanceReminders from "./pages/portal/MaintenanceReminders";
 
 export default function App() {
 	return (
@@ -27,6 +28,7 @@ export default function App() {
 					<Route path="/portal/dvirs" element={<Dvirs />} />
 					<Route path="/portal/ifta" element={<Ifta />} />
 					<Route path="/portal/idling" element={<Idling />} />
+					<Route path="/portal/maintenance-reminders" element={<MaintenanceReminders />} />
 				</Routes>
 			</Layout>
 		</div>

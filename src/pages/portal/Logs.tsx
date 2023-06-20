@@ -67,7 +67,7 @@ export default function Logs() {
 					]}
 				/>
 			</div>
-			<div className="overflow-auto h-[calc(100vh-300px)] border border-black-2 border-solid rounded-md mt-4 w-full">
+			<div className="overflow-auto max-h-[calc(100vh-300px)] border border-black-2 border-solid rounded-md mt-4 w-full">
 				<table className="w-full min-w-max border-collapse">
 					<thead className="text-sm">
 						<tr>
