@@ -10,6 +10,7 @@ import Logs from "./pages/portal/Logs";
 import UnidentifiedEvents from "./pages/portal/UnidentifiedEvents";
 import Dvirs from "./pages/portal/Dvirs";
 import Ifta from "./pages/portal/Ifta";
+import Idling from "./pages/portal/Idling";
 
 export default function App() {
 	return (
@@ -25,6 +26,7 @@ export default function App() {
 					<Route path="/portal/unidentified-events" element={<UnidentifiedEvents />} />
 					<Route path="/portal/dvirs" element={<Dvirs />} />
 					<Route path="/portal/ifta" element={<Ifta />} />
+					<Route path="/portal/idling" element={<Idling />} />
 				</Routes>
 			</Layout>
 		</div>
