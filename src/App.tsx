@@ -5,6 +5,11 @@ import Home from "./pages/Home";
 import ResetPassword from "./pages/ResetPassword";
 import Vehicles from "./pages/portal/Vehicles";
 import Layout from "./components/layout";
+import Drivers from "./pages/portal/Drivers";
+import Logs from "./pages/portal/Logs";
+import UnidentifiedEvents from "./pages/portal/UnidentifiedEvents";
+import Dvirs from "./pages/portal/Dvirs";
+import Ifta from "./pages/portal/Ifta";
 
 export default function App() {
 	return (
@@ -15,6 +20,11 @@ export default function App() {
 					<Route path="/login" element={<Login />} />
 					<Route path="/reset-password" element={<ResetPassword />} />
 					<Route path="/portal/vehicles" element={<Vehicles />} />
+					<Route path="/portal/drivers" element={<Drivers />} />
+					<Route path="/portal/logs" element={<Logs />} />
+					<Route path="/portal/unidentified-events" element={<UnidentifiedEvents />} />
+					<Route path="/portal/dvirs" element={<Dvirs />} />
+					<Route path="/portal/ifta" element={<Ifta />} />
 				</Routes>
 			</Layout>
 		</div>

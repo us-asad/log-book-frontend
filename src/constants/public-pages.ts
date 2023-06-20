@@ -1,1 +1,1 @@
-export default ['/login', 'reset-password'];
+export default ['/login', '/reset-password'];
