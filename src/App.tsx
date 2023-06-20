@@ -15,6 +15,10 @@ import MaintenanceReminders from './pages/portal/MaintenanceReminders';
 import MaintenanceHistory from './pages/portal/MaintenanceHistory';
 import ManageDrivers from './pages/portal/ManageDrivers';
 import ManageVehicles from './pages/portal/ManageVehicles';
+import ManageGroups from './pages/portal/ManageGroups';
+import ManageELDs from './pages/portal/ManageElds';
+import ManageTrackers from './pages/portal/ManageTrackers';
+import Company from './pages/portal/Company';
 
 export default function App() {
 	return (
@@ -44,6 +48,10 @@ export default function App() {
 					/>
 					<Route path="/portal/manage-drivers" element={<ManageDrivers />} />
 					<Route path="/portal/manage-vehicles" element={<ManageVehicles />} />
+					<Route path="/portal/manage-groups" element={<ManageGroups />} />
+					<Route path="/portal/manage-elds" element={<ManageELDs />} />
+					<Route path="/portal/manage-trackers" element={<ManageTrackers />} />
+					<Route path="/portal/company" element={<Company />} />
 				</Routes>
 			</Layout>
 		</div>
