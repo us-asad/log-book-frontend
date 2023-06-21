@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import { Home, Login, ResetPassword } from './pages';
 import {
 	Company,
-	Drivers,
 	Dvirs,
 	Idling,
 	Ifta,
@@ -17,6 +16,8 @@ import {
 	UnidentifiedEvents,
 	Vehicles,
 	ManageELDs,
+	Drivers,
+	Driver,
 } from './pages/portal';
 
 export default function AppRoutes() {
@@ -27,6 +28,7 @@ export default function AppRoutes() {
 			<Route path="/reset-password" element={<ResetPassword />} />
 			<Route path="/portal/vehicles" element={<Vehicles />} />
 			<Route path="/portal/drivers" element={<Drivers />} />
+			<Route path="/portal/drivers/:id" element={<Driver />} />
 			<Route path="/portal/logs" element={<Logs />} />
 			<Route
 				path="/portal/unidentified-events"
