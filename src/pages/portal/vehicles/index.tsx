@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select } from 'antd';
 import { Link } from 'react-router-dom';
-import PageHeader from '../../components/common/PageHeader';
+import PageHeader from '../../../components/common/PageHeader';
 
 export default function Vehicles() {
 	return (
@@ -72,11 +72,11 @@ export default function Vehicles() {
 						>
 							<div className="flex flex-col gap-2">
 								<p className="flex gap-2">
-									<Link to="/" className="hover:text-blue duration-150">
+									<Link to="/portal/vehicles/001" className="hover:text-blue duration-150">
 										00{idx + 1}
 									</Link>
 									<span>-</span>
-									<Link to="/" className="hover:text-blue duration-150">
+									<Link to="/portal/drivers/testdriver1" className="hover:text-blue duration-150">
 										Namebek Nameov {idx}
 									</Link>
 								</p>
@@ -88,7 +88,9 @@ export default function Vehicles() {
 						</div>
 					))}
 				</div>
-				<div className="w-[62%]"></div>
+				<div className="w-[62%] grid place-content-center">
+					Coming SooN
+				</div>
 			</div>
 		</div>
 	);

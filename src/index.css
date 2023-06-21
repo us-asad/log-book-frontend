@@ -28,6 +28,10 @@
   .default-hover {
     @apply hover:opacity-80 duration-150;
   }
+	
+	.icon-btn {
+		@apply flex items-center gap-2;
+	}
 }
 
 * {
@@ -75,4 +79,8 @@ button {
 a {
 	text-decoration: inherit;
 	color: inherit;
+}
+
+.icon-btn span {
+	font-size: 14px;
 }
