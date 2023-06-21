@@ -1,5 +1,6 @@
 export { default as Company } from "./Company";
-export { default as Drivers } from "./Drivers";
+export { default as Drivers } from "./drivers/index";
+export { default as Driver } from "./drivers/Driver";
 export { default as Dvirs } from "./Dvirs";
 export { default as Idling } from "./Idling";
 export { default as Ifta } from "./Ifta";

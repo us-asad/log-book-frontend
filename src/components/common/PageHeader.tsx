@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import { IoMdRefresh } from 'react-icons/io';
 
 interface Props {
-	title: string;
+	title?: string;
 	buttons?: React.ReactNode;
 }
 

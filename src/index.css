@@ -4,50 +4,75 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.table {
+		@apply w-full border border-solid border-black-2 border-collapse;
+	}
+
+	.table-td-hoverable {
+		@apply hover:bg-blue-2 duration-150 cursor-pointer;
+	}
+
+	.table-th {
+		@apply font-medium border border-black-2 border-solid px-3 py-2 uppercase text-xs;
+	}
+
+	.table-th-hoverable {
+		@apply hover:bg-black-2 duration-150 cursor-pointer;
+	}
+
+	.table-td {
+		@apply border border-black-2 border-solid px-3 py-2 text-sm text-black-4;
+	}
+
+  .default-hover {
+    @apply hover:opacity-80 duration-150;
+  }
+}
+
 * {
-  outline: 0;
-  margin: 0;
-  padding: 0;
+	outline: 0;
+	margin: 0;
+	padding: 0;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #2564eba4;
-  border-radius: 20px;
-  border: 3px solid transparent;
-  background-clip: content-box;
-  transition: 200ms;
+	background-color: #2564eba4;
+	border-radius: 20px;
+	border: 3px solid transparent;
+	background-clip: content-box;
+	transition: 200ms;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #2563eb;
+	background-color: #2563eb;
 }
 
 *::-webkit-scrollbar-track {
-  background-color: #E9EAFD;
-  border-radius: 999px;
+	background-color: #e9eafd;
+	border-radius: 999px;
 }
 
 *::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+	width: 12px;
+	height: 12px;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
 }
 
 button {
-  border: 0;
-  background-color: transparent;
-  font-size: inherit;
-  font-family: inherit;
-  cursor: pointer;
-}
-
-a {
-  text-decoration: inherit;
+	border: 0;
+	background-color: transparent;
+	font-size: inherit;
+	font-family: inherit;
+	cursor: pointer;
   color: inherit;
 }
 
-
+a {
+	text-decoration: inherit;
+	color: inherit;
+}
