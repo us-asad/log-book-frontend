@@ -18,6 +18,8 @@ import {
 	ManageELDs,
 	Drivers,
 	Driver,
+	Vehicle,
+	Log,
 } from './pages/portal';
 
 export default function AppRoutes() {
@@ -27,9 +29,11 @@ export default function AppRoutes() {
 			<Route path="/login" element={<Login />} />
 			<Route path="/reset-password" element={<ResetPassword />} />
 			<Route path="/portal/vehicles" element={<Vehicles />} />
+			<Route path="/portal/vehicles/:id" element={<Vehicle />} />
 			<Route path="/portal/drivers" element={<Drivers />} />
 			<Route path="/portal/drivers/:id" element={<Driver />} />
 			<Route path="/portal/logs" element={<Logs />} />
+			<Route path="/portal/logs/:id" element={<Log />} />
 			<Route
 				path="/portal/unidentified-events"
 				element={<UnidentifiedEvents />}
