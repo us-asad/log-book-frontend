@@ -23,28 +23,28 @@ export default function ManageVehicles() {
 				<table className="w-max min-w-full border-collapse">
 					<thead className="text-sm">
 						<tr>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								<div className="flex flex-col gap-1">
 									<span>Name</span>
 									<Input size="small" placeholder="Search" className="w-full" />
 								</div>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								<div className="flex flex-col gap-1">
 									<span>Licence Plate</span>
 									<Input size="small" placeholder="Search" className="w-full" />
 								</div>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Make / Model
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								ELD
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Groups
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<div className="flex flex-col gap-1">
 									<button className="flex items-center gap-1">
 										<span>Status</span>
@@ -67,20 +67,20 @@ export default function ManageVehicles() {
 					<tbody className="text-sm">
 						{[...new Array(20)].map((_, idx) => (
 							<tr key={idx}>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									Name1 Name2
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									Pending
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									Volvo VNL
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									3B5000052624 (C8:FB:C3:36:74:35)
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2"></td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td"></td>
+								<td className="table-td">
 									Active
 								</td>
 							</tr>

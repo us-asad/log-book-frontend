@@ -40,28 +40,28 @@ export default function MaintenanceReminders() {
 				/>
 			</div>
 			<div className="overflow-auto h-[calc(100vh-300px)] border border-black-2 border-solid rounded-md mt-4 w-full relative">
-				<table className="w-full min-w-max border-collapse">
+				<table className="table">
 					<thead className="text-sm">
 						<tr>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Vehicle
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Service Type
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Service Interval
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>Next Service Due</span>
 									<MdSort />
 								</button>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Complete
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Action
 							</th>
 						</tr>

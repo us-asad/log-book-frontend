@@ -6,40 +6,40 @@ export default function Reports() {
 	return (
 		<>
 			<div className="overflow-auto max-h-[calc(100vh-300px)] border border-black-2 border-solid rounded-md mt-4 w-full">
-				<table className="w-full min-w-max border-collapse">
+				<table className="table">
 					<thead className="text-sm">
 						<tr>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>Submitted</span>
 									<MdSort />
 								</button>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>Form</span>
 									<MdSort />
 								</button>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>To</span>
 									<MdSort />
 								</button>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>Vehicle</span>
 									<MdSort />
 								</button>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>Status</span>
 									<MdSort />
 								</button>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>Report</span>
 									<MdSort />
@@ -50,22 +50,22 @@ export default function Reports() {
 					<tbody className="text-sm">
 						{[...new Array(20)].map((_, idx) => (
 							<tr key={idx}>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									May 27, 03:29 PM
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									2022/07/01
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									2023/06/30
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									925
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									Ready
 								</td>
-								<td className="border border-black-2 border-solid px-3 py-2">
+								<td className="table-td">
 									<div className="flex flex-col">
 										<Button type="link" className="p-0 h-max w-max">
 											Download PDF

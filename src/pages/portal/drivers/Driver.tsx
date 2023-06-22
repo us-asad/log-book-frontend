@@ -63,7 +63,7 @@ export default function Drivers() {
 			<div className="border border-solid border-black-2 rounded-md px-6 py-4 mt-5">
 				<h2 className="text-xl font-normal">Hours of Service</h2>
 				<div className="overflow-auto max-h-[calc(100vh-300px)] border border-black-2 border-solid rounded-tl-md rounded-tr-md border-b-0 mt-4 w-full">
-					<table className="w-full min-w-max border-collapse">
+					<table className="table">
 						<thead className="text-xs tracking-[.05em]">
 							<tr>
 								<th className="table-th">Status</th>

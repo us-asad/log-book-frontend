@@ -51,22 +51,22 @@ export default function Dvirs() {
 				/>
 			</div>
 			<div className="overflow-auto h-[calc(100vh-300px)] border border-black-2 border-solid rounded-md mt-4 w-full relative">
-				<table className="w-full min-w-max border-collapse">
+				<table className="table">
 					<thead className="text-sm">
 						<tr>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Time
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Vehicle
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Driver
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Defects
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Status
 							</th>
 						</tr>
