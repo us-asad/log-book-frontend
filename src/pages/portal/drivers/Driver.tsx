@@ -7,6 +7,7 @@ import { FiClock } from 'react-icons/fi';
 import { RiSmartphoneLine } from 'react-icons/ri';
 import { AiTwotoneCalendar } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 export default function Drivers() {
 	const params = useParams();
@@ -27,9 +28,14 @@ export default function Drivers() {
 								{ value: '10', label: '10 Minutes' },
 							]}
 						/>
-						<Button className="flex items-center gap-2 group">
-							<span>Edit</span>
-							<FaEdit className="text-black-4 group-hover:text-inherit duration-75" />
+						<Button>
+							<Link
+								className="flex items-center gap-2 group"
+								to="/portal/drivers/testuser/edit"
+							>
+								<span>Edit</span>
+								<FaEdit className="text-black-4 group-hover:text-inherit duration-75" />
+							</Link>
 						</Button>
 					</>
 				}

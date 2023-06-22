@@ -63,7 +63,7 @@ export default function Vehicles() {
 					]}
 				/>
 			</div>
-			<div className="border border-black-2 border-solid rounded-md overflow-hidden mt-4 w-full">
+			<div className="border border-black-2 border-solid rounded-md overflow-hidden mt-4 w-full flex">
 				<div className="h-[calc(100vh-260px)] w-[28%] bg-black-1 overflow-y-auto">
 					{[...new Array(10)].map((_, idx) => (
 						<div

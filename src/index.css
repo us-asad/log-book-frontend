@@ -25,12 +25,20 @@
 		@apply border border-black-2 border-solid px-3 py-2 text-sm text-black-4;
 	}
 
-  .default-hover {
-    @apply hover:opacity-80 duration-150;
-  }
-	
+	.default-hover {
+		@apply hover:opacity-80 duration-150;
+	}
+
 	.icon-btn {
 		@apply flex items-center gap-2;
+	}
+
+	.card {
+		@apply border border-solid border-black-2 rounded-md px-6 py-4 mt-5;
+	}
+
+	.card-title {
+		@apply text-xl font-normal mb-4;
 	}
 }
 
@@ -73,7 +81,7 @@ button {
 	font-size: inherit;
 	font-family: inherit;
 	cursor: pointer;
-  color: inherit;
+	color: inherit;
 }
 
 a {

@@ -11,7 +11,7 @@ export default function ManageVehicles() {
 				title="Manage Vehicles"
 				buttons={
 					<Button className="flex items-center gap-1 group">
-						<span>Add Event</span>
+						<span>Add Vehicle</span>
 						<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
 					</Button>
 				}

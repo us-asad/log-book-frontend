@@ -51,7 +51,7 @@ export default function Vehicle() {
 					</p>
 				</div>
 				<div>
-					<div className=" overflow-hidden w-full flex ">
+					<div className=" overflow-hidden w-full flex">
 						<div className="h-[calc(100vh-320px)] w-[28%] bg-black-1 overflow-y-auto">
 							{[...new Array(20)].map((_, idx) => (
 								<div

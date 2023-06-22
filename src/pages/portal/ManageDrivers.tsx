@@ -1,13 +1,21 @@
 import React from 'react';
-import { Input, Select } from 'antd';
+import { Button, Input, Select } from 'antd';
 import { MdSort } from 'react-icons/md';
-import { AiFillAndroid } from 'react-icons/ai';
+import { AiFillAndroid, AiOutlinePlus } from 'react-icons/ai';
 import PageHeader from '../../components/common/PageHeader';
 
 export default function ManageDrivers() {
 	return (
 		<div>
-			<PageHeader title="Manage Drivers" />
+			<PageHeader
+				title="Manage Drivers"
+				buttons={
+					<Button className="flex items-center gap-1 group">
+						<span>Add Driver</span>
+						<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
+					</Button>
+				}
+			/>
 			<div className="overflow-auto max-h-[calc(100vh-200px)] border border-black-2 border-solid rounded-md mt-4 w-full">
 				<table className="w-max border-collapse">
 					<thead className="text-sm">
