@@ -1,14 +1,14 @@
 import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
 import { FaClipboardList, FaEdit } from 'react-icons/fa';
-import PageHeader from '../../../components/common/PageHeader';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BsFillTruckFrontFill } from 'react-icons/bs';
 import { MdLabel } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { PageHeader } from '../../../components/common';
 
 export default function Vehicle() {
 	const params = useParams();
+	const navigate = useNavigate();
 
 	return (
 		<div>
@@ -26,14 +26,12 @@ export default function Vehicle() {
 								{ value: '10', label: '10 Minutes' },
 							]}
 						/>
-						<Button>
-							<Link
-								className="flex items-center gap-2 group"
-								to="/portal/vehicles/001/edit"
-							>
-								<span>Edit</span>
-								<FaEdit className="text-black-4 group-hover:text-inherit duration-75" />
-							</Link>
+						<Button
+							onClick={() => navigate('/portal/vehicles/001/edit')}
+							className="flex items-center gap-2 group"
+						>
+							<span>Edit</span>
+							<FaEdit className="text-black-4 group-hover:text-inherit duration-75" />
 						</Button>
 					</>
 				}

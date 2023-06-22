@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from 'antd';
 import { MdSort } from 'react-icons/md';
-import PageHeader from '../../components/common/PageHeader';
+import { PageHeader } from '../../components/common';
 
 export default function ManageELDs() {
 	return (

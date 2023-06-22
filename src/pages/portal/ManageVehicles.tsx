@@ -2,15 +2,18 @@ import React from 'react';
 import { Button, Input, Select } from 'antd';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';
-import PageHeader from '../../components/common/PageHeader';
+import { PageHeader } from '../../components/common';
+import { useNavigate } from 'react-router-dom';
 
 export default function ManageVehicles() {
+	const navigate = useNavigate();
+
 	return (
 		<div>
 			<PageHeader
 				title="Manage Vehicles"
 				buttons={
-					<Button className="flex items-center gap-1 group">
+					<Button onClick={() => navigate("/portal/manage-vehicles/add")} className="flex items-center gap-1 group">
 						<span>Add Vehicle</span>
 						<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
 					</Button>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
 import { IoMdCloudDownload } from 'react-icons/io';
-import PageHeader from '../../components/common/PageHeader';
-import NoRecords from '../../components/common/NoRecords';
+import { NoRecords, PageHeader } from '../../components/common';
 
 export default function Dvirs() {
 	return (
 		<div>
 			<PageHeader
+
 				title="DVIRs"
 				buttons={
 					<Button className="flex items-center gap-1 group">

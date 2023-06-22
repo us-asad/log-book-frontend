@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PageHeader from '../../../components/common/PageHeader';
 import { Button, Input, Modal, Select } from 'antd';
 import { BsFillTrashFill } from 'react-icons/bs';
+import { PageHeader } from '../../../components/common';
 
 export default function AddMaintenanceReminders() {
 	const [showServiceTypes, setShowServiceTypes] = useState(false);

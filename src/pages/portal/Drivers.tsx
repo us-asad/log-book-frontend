@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select, Input } from 'antd';
-import PageHeader from '../../components/common/PageHeader';
 import { useNavigate } from 'react-router-dom';
+import { PageHeader } from '../../components/common';
 
 export default function Drivers() {
 	const navigate = useNavigate();

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
-import PageHeader from '../../components/common/PageHeader';
-import NoRecords from '../../components/common/NoRecords';
+import { NoRecords, PageHeader } from '../../components/common';
 
 export default function UnidentifiedEvents() {
 	return (

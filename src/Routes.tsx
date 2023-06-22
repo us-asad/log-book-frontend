@@ -21,9 +21,12 @@ import {
 	Vehicle,
 	Log,
 	AddMaintenanceReminders,
+	AddDriver,
+	AddVehicle,
+	EditDriver,
+	EditVehicle,
+	AddGroup,
 } from './pages/portal';
-import EditDriver from './pages/portal/drivers/EditDriver';
-import EditVehicle from './pages/portal/vehicles/EditVehicle';
 
 export default function AppRoutes() {
 	return (
@@ -54,17 +57,23 @@ export default function AppRoutes() {
 				<Route path="dvirs" element={<Dvirs />} />
 				<Route path="ifta" element={<Ifta />} />
 				<Route path="idling" element={<Idling />} />
-				<Route
-					path="maintenance-reminders"
-					
-				>
-					<Route path='' element={<MaintenanceReminders />} />
-					<Route path='add' element={<AddMaintenanceReminders />} />
+				<Route path="maintenance-reminders">
+					<Route path="" element={<MaintenanceReminders />} />
+					<Route path="add" element={<AddMaintenanceReminders />} />
 				</Route>
 				<Route path="maintenance-history" element={<MaintenanceHistory />} />
-				<Route path="manage-drivers" element={<ManageDrivers />} />
-				<Route path="manage-vehicles" element={<ManageVehicles />} />
-				<Route path="manage-groups" element={<ManageGroups />} />
+				<Route path="manage-drivers">
+					<Route path="" element={<ManageDrivers />} />
+					<Route path="add" element={<AddDriver />} />
+				</Route>
+				<Route path="manage-vehicles">
+					<Route path="" element={<ManageVehicles />} />
+					<Route path="add" element={<AddVehicle />} />
+				</Route>
+				<Route path="manage-groups">
+					<Route path="" element={<ManageGroups />} />
+					<Route path="add" element={<AddGroup />} />
+				</Route>
 				<Route path="manage-elds" element={<ManageELDs />} />
 				<Route path="manage-trackers" element={<ManageTrackers />} />
 				<Route path="company" element={<Company />} />

@@ -2,22 +2,24 @@ import React from 'react';
 import { Button, Select } from 'antd';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';
-import PageHeader from '../../../components/common/PageHeader';
-import NoRecords from '../../../components/common/NoRecords';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { NoRecords, PageHeader } from '../../../components/common';
 
 export default function MaintenanceReminders() {
+	const navigate = useNavigate();
+
 	return (
 		<div>
 			<PageHeader
 				title="Maintenance Reminders"
 				buttons={
 					<>
-						<Button>
-							<Link className="flex items-center gap-1 group" to="/portal/maintenance-reminders/add">
-								<span>Add Reminder</span>
-								<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
-							</Link>
+						<Button
+							onClick={() => navigate('/portal/maintenance-reminders/add')}
+							className="flex items-center gap-1 group"
+						>
+							<span>Add Reminder</span>
+							<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
 						</Button>
 						<Button className="flex items-center gap-1 group">
 							Copy Reminder

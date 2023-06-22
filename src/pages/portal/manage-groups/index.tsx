@@ -1,16 +1,18 @@
 import React from 'react';
 import { Button, Input } from 'antd';
 import { AiOutlinePlus } from 'react-icons/ai';
-import PageHeader from '../../components/common/PageHeader';
-import NoRecords from '../../components/common/NoRecords';
+import { NoRecords, PageHeader } from '../../../components/common';
+import { useNavigate } from 'react-router-dom';
 
 export default function ManageGroups() {
+  const navigate = useNavigate();
+
 	return (
 		<div>
 			<PageHeader
 				title="Manage Groups"
 				buttons={
-					<Button className="flex items-center gap-1 group">
+					<Button onClick={() => navigate("/portal/manage-groups/add")} className="flex items-center gap-1 group">
 						<span>Add Group</span>
 						<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
 					</Button>

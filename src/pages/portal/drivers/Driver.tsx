@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Collapse, Select } from 'antd';
-import PageHeader from '../../../components/common/PageHeader';
 import { useParams } from 'react-router-dom';
 import { FaEdit, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
@@ -8,6 +7,7 @@ import { RiSmartphoneLine } from 'react-icons/ri';
 import { AiTwotoneCalendar } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import { PageHeader } from '../../../components/common';
 
 export default function Drivers() {
 	const params = useParams();

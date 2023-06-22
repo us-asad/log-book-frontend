@@ -1,8 +1,7 @@
 import React from 'react';
 import { Input, Select } from 'antd';
 import { MdSort } from 'react-icons/md';
-import PageHeader from '../../components/common/PageHeader';
-import NoRecords from '../../components/common/NoRecords';
+import { NoRecords, PageHeader } from '../../components/common';
 
 export default function ManageTrackers() {
 	return (
