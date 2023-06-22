@@ -26,6 +26,7 @@ import {
 	EditDriver,
 	EditVehicle,
 	AddGroup,
+	EditProfile,
 } from './pages/portal';
 
 export default function AppRoutes() {
@@ -77,6 +78,8 @@ export default function AppRoutes() {
 				<Route path="manage-elds" element={<ManageELDs />} />
 				<Route path="manage-trackers" element={<ManageTrackers />} />
 				<Route path="company" element={<Company />} />
+
+				<Route path='profile/edit' element={<EditProfile />} />
 			</Route>
 		</Routes>
 	);

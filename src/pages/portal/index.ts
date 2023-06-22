@@ -22,3 +22,4 @@ export { default as Vehicles } from "./vehicles";
 export { default as Vehicle } from "./vehicles/Vehicle";
 export { default as AddVehicle } from "./vehicles/AddVehicle";
 export { default as EditVehicle } from "./vehicles/EditVehicle";
+export { default as EditProfile } from "./profile/EditProfile";
