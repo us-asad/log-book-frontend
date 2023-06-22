@@ -22,6 +22,7 @@ import {
 	Log,
 } from './pages/portal';
 import EditDriver from './pages/portal/drivers/EditDriver';
+import EditVehicle from './pages/portal/vehicles/EditVehicle';
 
 export default function AppRoutes() {
 	return (
@@ -32,7 +33,10 @@ export default function AppRoutes() {
 			<Route path="/portal/">
 				<Route path="vehicles">
 					<Route path="" element={<Vehicles />} />
-					<Route path=":id" element={<Vehicle />} />
+					<Route path=":id">
+						<Route path="" element={<Vehicle />} />
+						<Route path="edit" element={<EditVehicle />} />
+					</Route>
 				</Route>
 				<Route path="drivers">
 					<Route path="" element={<Drivers />} />
