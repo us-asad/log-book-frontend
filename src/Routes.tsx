@@ -20,6 +20,7 @@ import {
 	Driver,
 	Vehicle,
 	Log,
+	AddMaintenanceReminders,
 } from './pages/portal';
 import EditDriver from './pages/portal/drivers/EditDriver';
 import EditVehicle from './pages/portal/vehicles/EditVehicle';
@@ -55,8 +56,11 @@ export default function AppRoutes() {
 				<Route path="idling" element={<Idling />} />
 				<Route
 					path="maintenance-reminders"
-					element={<MaintenanceReminders />}
-				/>
+					
+				>
+					<Route path='' element={<MaintenanceReminders />} />
+					<Route path='add' element={<AddMaintenanceReminders />} />
+				</Route>
 				<Route path="maintenance-history" element={<MaintenanceHistory />} />
 				<Route path="manage-drivers" element={<ManageDrivers />} />
 				<Route path="manage-vehicles" element={<ManageVehicles />} />

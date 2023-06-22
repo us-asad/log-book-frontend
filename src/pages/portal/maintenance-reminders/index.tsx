@@ -2,8 +2,9 @@ import React from 'react';
 import { Button, Select } from 'antd';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';
-import PageHeader from '../../components/common/PageHeader';
-import NoRecords from '../../components/common/NoRecords';
+import PageHeader from '../../../components/common/PageHeader';
+import NoRecords from '../../../components/common/NoRecords';
+import { Link } from 'react-router-dom';
 
 export default function MaintenanceReminders() {
 	return (
@@ -12,9 +13,11 @@ export default function MaintenanceReminders() {
 				title="Maintenance Reminders"
 				buttons={
 					<>
-						<Button className="flex items-center gap-1 group">
-							<span>Add Reminder</span>
-							<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
+						<Button>
+							<Link className="flex items-center gap-1 group" to="/portal/maintenance-reminders/add">
+								<span>Add Reminder</span>
+								<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
+							</Link>
 						</Button>
 						<Button className="flex items-center gap-1 group">
 							Copy Reminder
