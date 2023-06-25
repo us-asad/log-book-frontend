@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react';
 import { Tabs } from 'antd';
-import Generate from '../../components/ifta/Generate';
-import Reports from '../../components/ifta/Reports';
-import PageHeader from '../../components/common/PageHeader';
+import { Generate, Reports } from '../../components/ifta';
+import { PageHeader } from '../../components/common';
 
 export default function Ifta() {
 	const tabItems = useMemo(

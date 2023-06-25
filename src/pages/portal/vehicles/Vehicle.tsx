@@ -1,13 +1,14 @@
 import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
 import { FaClipboardList, FaEdit } from 'react-icons/fa';
-import PageHeader from '../../../components/common/PageHeader';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BsFillTruckFrontFill } from 'react-icons/bs';
 import { MdLabel } from 'react-icons/md';
+import { PageHeader } from '../../../components/common';
 
 export default function Vehicle() {
 	const params = useParams();
+	const navigate = useNavigate();
 
 	return (
 		<div>
@@ -25,7 +26,10 @@ export default function Vehicle() {
 								{ value: '10', label: '10 Minutes' },
 							]}
 						/>
-						<Button className="flex items-center gap-2 group">
+						<Button
+							onClick={() => navigate('/portal/vehicles/001/edit')}
+							className="flex items-center gap-2 group"
+						>
 							<span>Edit</span>
 							<FaEdit className="text-black-4 group-hover:text-inherit duration-75" />
 						</Button>
@@ -51,7 +55,7 @@ export default function Vehicle() {
 					</p>
 				</div>
 				<div>
-					<div className=" overflow-hidden w-full flex ">
+					<div className=" overflow-hidden w-full flex">
 						<div className="h-[calc(100vh-320px)] w-[28%] bg-black-1 overflow-y-auto">
 							{[...new Array(20)].map((_, idx) => (
 								<div
@@ -66,7 +70,7 @@ export default function Vehicle() {
 								</div>
 							))}
 						</div>
-            <div className='grid place-content-center w-[72%]'>Coming sOOn</div>
+						<div className="grid place-content-center w-[72%]">Coming sOOn</div>
 					</div>
 				</div>
 			</div>

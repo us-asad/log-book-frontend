@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Collapse, Select } from 'antd';
-import PageHeader from '../../../components/common/PageHeader';
 import { useParams } from 'react-router-dom';
 import { FaEdit, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
 import { RiSmartphoneLine } from 'react-icons/ri';
 import { AiTwotoneCalendar } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import { PageHeader } from '../../../components/common';
 
 export default function Drivers() {
 	const params = useParams();
@@ -27,9 +28,14 @@ export default function Drivers() {
 								{ value: '10', label: '10 Minutes' },
 							]}
 						/>
-						<Button className="flex items-center gap-2 group">
-							<span>Edit</span>
-							<FaEdit className="text-black-4 group-hover:text-inherit duration-75" />
+						<Button>
+							<Link
+								className="flex items-center gap-2 group"
+								to="/portal/drivers/testuser/edit"
+							>
+								<span>Edit</span>
+								<FaEdit className="text-black-4 group-hover:text-inherit duration-75" />
+							</Link>
 						</Button>
 					</>
 				}
@@ -57,7 +63,7 @@ export default function Drivers() {
 			<div className="border border-solid border-black-2 rounded-md px-6 py-4 mt-5">
 				<h2 className="text-xl font-normal">Hours of Service</h2>
 				<div className="overflow-auto max-h-[calc(100vh-300px)] border border-black-2 border-solid rounded-tl-md rounded-tr-md border-b-0 mt-4 w-full">
-					<table className="w-full min-w-max border-collapse">
+					<table className="table">
 						<thead className="text-xs tracking-[.05em]">
 							<tr>
 								<th className="table-th">Status</th>

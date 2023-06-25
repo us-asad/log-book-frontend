@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
-import PageHeader from '../../components/common/PageHeader';
+import { PageHeader } from '../../components/common';
 
 export default function Idling() {
 	return (

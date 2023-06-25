@@ -20,6 +20,13 @@ import {
 	Driver,
 	Vehicle,
 	Log,
+	AddMaintenanceReminders,
+	AddDriver,
+	AddVehicle,
+	EditDriver,
+	EditVehicle,
+	AddGroup,
+	EditProfile,
 } from './pages/portal';
 
 export default function AppRoutes() {
@@ -28,33 +35,52 @@ export default function AppRoutes() {
 			<Route path="/" element={<Home />} />
 			<Route path="/login" element={<Login />} />
 			<Route path="/reset-password" element={<ResetPassword />} />
-			<Route path="/portal/vehicles" element={<Vehicles />} />
-			<Route path="/portal/vehicles/:id" element={<Vehicle />} />
-			<Route path="/portal/drivers" element={<Drivers />} />
-			<Route path="/portal/drivers/:id" element={<Driver />} />
-			<Route path="/portal/logs" element={<Logs />} />
-			<Route path="/portal/logs/:id" element={<Log />} />
-			<Route
-				path="/portal/unidentified-events"
-				element={<UnidentifiedEvents />}
-			/>
-			<Route path="/portal/dvirs" element={<Dvirs />} />
-			<Route path="/portal/ifta" element={<Ifta />} />
-			<Route path="/portal/idling" element={<Idling />} />
-			<Route
-				path="/portal/maintenance-reminders"
-				element={<MaintenanceReminders />}
-			/>
-			<Route
-				path="/portal/maintenance-history"
-				element={<MaintenanceHistory />}
-			/>
-			<Route path="/portal/manage-drivers" element={<ManageDrivers />} />
-			<Route path="/portal/manage-vehicles" element={<ManageVehicles />} />
-			<Route path="/portal/manage-groups" element={<ManageGroups />} />
-			<Route path="/portal/manage-elds" element={<ManageELDs />} />
-			<Route path="/portal/manage-trackers" element={<ManageTrackers />} />
-			<Route path="/portal/company" element={<Company />} />
+			<Route path="/portal/">
+				<Route path="vehicles">
+					<Route path="" element={<Vehicles />} />
+					<Route path=":id">
+						<Route path="" element={<Vehicle />} />
+						<Route path="edit" element={<EditVehicle />} />
+					</Route>
+				</Route>
+				<Route path="drivers">
+					<Route path="" element={<Drivers />} />
+					<Route path=":id">
+						<Route path="" element={<Driver />} />
+						<Route path="edit" element={<EditDriver />} />
+					</Route>
+				</Route>
+				<Route path="logs">
+					<Route path="" element={<Logs />} />
+					<Route path=":id" element={<Log />} />
+				</Route>
+				<Route path="unidentified-events" element={<UnidentifiedEvents />} />
+				<Route path="dvirs" element={<Dvirs />} />
+				<Route path="ifta" element={<Ifta />} />
+				<Route path="idling" element={<Idling />} />
+				<Route path="maintenance-reminders">
+					<Route path="" element={<MaintenanceReminders />} />
+					<Route path="add" element={<AddMaintenanceReminders />} />
+				</Route>
+				<Route path="maintenance-history" element={<MaintenanceHistory />} />
+				<Route path="manage-drivers">
+					<Route path="" element={<ManageDrivers />} />
+					<Route path="add" element={<AddDriver />} />
+				</Route>
+				<Route path="manage-vehicles">
+					<Route path="" element={<ManageVehicles />} />
+					<Route path="add" element={<AddVehicle />} />
+				</Route>
+				<Route path="manage-groups">
+					<Route path="" element={<ManageGroups />} />
+					<Route path="add" element={<AddGroup />} />
+				</Route>
+				<Route path="manage-elds" element={<ManageELDs />} />
+				<Route path="manage-trackers" element={<ManageTrackers />} />
+				<Route path="company" element={<Company />} />
+
+				<Route path='profile/edit' element={<EditProfile />} />
+			</Route>
 		</Routes>
 	);
 }

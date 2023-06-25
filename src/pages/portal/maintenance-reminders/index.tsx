@@ -2,17 +2,22 @@ import React from 'react';
 import { Button, Select } from 'antd';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';
-import PageHeader from '../../components/common/PageHeader';
-import NoRecords from '../../components/common/NoRecords';
+import { useNavigate } from 'react-router-dom';
+import { NoRecords, PageHeader } from '../../../components/common';
 
 export default function MaintenanceReminders() {
+	const navigate = useNavigate();
+
 	return (
 		<div>
 			<PageHeader
 				title="Maintenance Reminders"
 				buttons={
 					<>
-						<Button className="flex items-center gap-1 group">
+						<Button
+							onClick={() => navigate('/portal/maintenance-reminders/add')}
+							className="flex items-center gap-1 group"
+						>
 							<span>Add Reminder</span>
 							<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
 						</Button>
@@ -35,28 +40,28 @@ export default function MaintenanceReminders() {
 				/>
 			</div>
 			<div className="overflow-auto h-[calc(100vh-300px)] border border-black-2 border-solid rounded-md mt-4 w-full relative">
-				<table className="w-full min-w-max border-collapse">
+				<table className="table">
 					<thead className="text-sm">
 						<tr>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Vehicle
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Service Type
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Service Interval
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start hover:bg-black-2 duration-150 cursor-pointer">
+							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>Next Service Due</span>
 									<MdSort />
 								</button>
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Complete
 							</th>
-							<th className="font-medium border border-black-2 border-solid px-3 py-2 text-start">
+							<th className="table-th text-start">
 								Action
 							</th>
 						</tr>
