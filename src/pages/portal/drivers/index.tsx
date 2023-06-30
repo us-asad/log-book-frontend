@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Select, Input } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { NoRecords, PageHeader } from '../../../components/common';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { PageHeader } from '../../../components/common';
 import { Button } from 'antd';
 import VehicleForm from '../../../components/forms/VehicleForm';

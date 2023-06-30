@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Select } from 'antd';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, DatePicker, Input, Modal, Select } from 'antd';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { NoRecords, PageHeader } from '../../components/common';

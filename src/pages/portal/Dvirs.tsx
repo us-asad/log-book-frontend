@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
 import { IoMdCloudDownload } from 'react-icons/io';
 import { NoRecords, PageHeader } from '../../components/common';

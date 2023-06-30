@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '../common/Logo'
 import { Select } from "antd";
 import { BsFillMoonStarsFill } from "react-icons/bs";

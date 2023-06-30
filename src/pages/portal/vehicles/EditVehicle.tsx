@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from 'antd';
 import { PageHeader } from '../../../components/common';
 import VehicleForm from '../../../components/forms/VehicleForm';

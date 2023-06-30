@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
 
 export default function Generate() {

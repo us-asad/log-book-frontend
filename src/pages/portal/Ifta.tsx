@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Tabs } from 'antd';
 import { Generate, Reports } from '../../components/ifta';
 import { PageHeader } from '../../components/common';

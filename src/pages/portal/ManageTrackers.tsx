@@ -1,4 +1,3 @@
-import React from 'react';
 import { Input, Select } from 'antd';
 import { MdSort } from 'react-icons/md';
 import { NoRecords, PageHeader } from '../../components/common';

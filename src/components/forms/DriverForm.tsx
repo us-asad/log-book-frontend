@@ -1,4 +1,3 @@
-import React from 'react';
 import { Checkbox, Input, Select } from 'antd';
 import { Controller } from 'react-hook-form';
 import { getInputValidations } from '../../utils/functions';

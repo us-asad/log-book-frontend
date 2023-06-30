@@ -1,5 +1,4 @@
 import { Input, Select } from 'antd';
-import React from 'react';
 import { FormProps } from '../../types';
 import { Controller } from 'react-hook-form';
 import { getInputValidations } from '../../utils/functions';

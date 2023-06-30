@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Cookie from "js-cookie";
 import Layout from './components/layout';
 import AppRoutes from './Routes';

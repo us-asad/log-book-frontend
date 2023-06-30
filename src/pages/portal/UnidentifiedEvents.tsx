@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, DatePicker, Select } from 'antd';
 import { NoRecords, PageHeader } from '../../components/common';
 

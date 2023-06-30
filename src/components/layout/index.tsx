@@ -1,4 +1,3 @@
-import React from 'react'
 import Header from '../../components/layout/Header'
 import MainWrapper from '../../components/layout/MainWrapper'
 import SideMenu from './side-menu';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Input, Modal, Select } from 'antd';
 import { BsFillTrashFill } from 'react-icons/bs';
 import { PageHeader } from '../../../components/common';
