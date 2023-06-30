@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Select, Input } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { PageHeader } from '../../../components/common';
+import { NoRecords, PageHeader } from '../../../components/common';
+import { getData } from '../../../utils/functions';
+import { Driver } from '../../../types';
 
 export default function Drivers() {
 	const navigate = useNavigate();
+	const [drivers, setDrivers] = useState([]);
+
+	useEffect(() => {
+		setDrivers(getData('drivers') || []);
+	}, []);
 
 	return (
 		<div>
@@ -116,45 +123,39 @@ export default function Drivers() {
 						</tr>
 					</thead>
 					<tbody className="text-sm">
-						{[...new Array(10)].map((_, idx) => (
-							<tr
-								onClick={() => navigate('/portal/drivers/testuser')}
-								key={idx}
-								className="cursor-pointer hover:bg-blue-2 duration-150"
-							>
-								<td className="table-td">
-									Name Name2
-								</td>
-								<td className="table-td">
-									<span className="bg-green text-white text-xs px-6 py-1 block w-max mx-auto rounded-sm">
-										Driving
-									</span>
-								</td>
-								<td className="table-td">
-									5mi NW from Bristol, PA
-								</td>
-								<td className="table-td">
-									220
-								</td>
-								<td className="table-td">
-									08:00
-								</td>
-								<td className="table-td">
-									11:00
-								</td>
-								<td className="table-td">
-									14:00
-								</td>
-								<td className="table-td">
-									33:14
-								</td>
-								<td className="table-td"></td>
-								<td className="table-td"></td>
-								<td className="table-td">
-									05/12/2023
+						{drivers?.length ? (
+							drivers.map((driver: Driver, idx) => (
+								<tr
+									onClick={() => navigate(`/portal/drivers/${driver.username}`)}
+									key={idx}
+									className="cursor-pointer hover:bg-blue-2 duration-150"
+								>
+									<td className="table-td">
+										{driver.firstName} {driver.lastName}
+									</td>
+									<td className="table-td">
+										<span className="bg-green text-white text-xs px-6 py-1 block w-max mx-auto rounded-sm">
+											Driving
+										</span>
+									</td>
+									<td className="table-td">{driver.location}</td>
+									<td className="table-td">{driver.assignedVehicles}</td>
+									<td className="table-td">{driver.restBreak}</td>
+									<td className="table-td">{driver.driveTime}</td>
+									<td className="table-td">{driver.shiftTime}</td>
+									<td className="table-td">{driver.hosRule}</td>
+									<td className="table-td"></td>
+									<td className="table-td"></td>
+									<td className="table-td">05/12/2023</td>
+								</tr>
+							))
+						) : (
+							<tr>
+								<td>
+									<NoRecords text="No Drivers Found" />
 								</td>
 							</tr>
-						))}
+						)}
 					</tbody>
 				</table>
 			</div>

@@ -9,6 +9,10 @@
 		@apply w-full border border-solid border-black-2 border-collapse;
 	}
 
+	.table-tr-hoverable {
+		@apply hover:bg-blue-2 duration-150 cursor-pointer;
+	}
+	
 	.table-td-hoverable {
 		@apply hover:bg-blue-2 duration-150 cursor-pointer;
 	}

@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, DatePicker, Select } from 'antd';
 import { FaClipboardList, FaEdit } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import { BsFillTruckFrontFill } from 'react-icons/bs';
 import { MdLabel } from 'react-icons/md';
 import { PageHeader } from '../../../components/common';
+import { getData } from '../../../utils/functions';
+import { Vehicle } from '../../../types';
 
-export default function Vehicle() {
+export default function VehiclePage() {
 	const params = useParams();
 	const navigate = useNavigate();
+	const [vehicle, setVehicle] = useState<Vehicle | null>(null);
+
+	useEffect(() => {
+		setVehicle(
+			getData('vehicles')?.find((vehicle: Vehicle) => `${vehicle.id}` === `${params.id}`)
+		);
+	}, []);
 
 	return (
 		<div>
@@ -43,15 +52,15 @@ export default function Vehicle() {
 				<div className="border-b border-solid border-black-2 flex items-center gap-4 px-3 py-2 border-0">
 					<p className="flex items-center gap-2">
 						<BsFillTruckFrontFill />
-						<span className="text-black-4 text-sm">Volvo VNL</span>
+						<span className="text-black-4 text-sm">{vehicle?.make} {vehicle?.model}</span>
 					</p>
 					<p className="flex items-center gap-2">
 						<FaClipboardList />
-						<span className="text-black-4 text-sm">AH02747</span>
+						<span className="text-black-4 text-sm">{vehicle?.licenseNumber}</span>
 					</p>
 					<p className="flex items-center gap-2">
 						<MdLabel />
-						<span className="text-black-4 text-sm">4V4NC9EJ7MN263697</span>
+						<span className="text-black-4 text-sm">{vehicle?.vin}</span>
 					</p>
 				</div>
 				<div>

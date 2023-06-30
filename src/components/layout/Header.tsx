@@ -37,6 +37,6 @@ const langs = [
   { value: "eng", label: "English", link: "https://img.icons8.com/color/48/great-britain.png" },
   { value: "ru", label: "Russia", link: "https://img.icons8.com/external-flat-icons-inmotus-design/48/external-europe-europe-flags-flat-icons-inmotus-design-8.png" },
   {
-    value: "uz", label: "Español", link: "https://img.icons8.com/color/48/uzbekistan.png"
+    value: "uz", label: "Uzbek", link: "https://img.icons8.com/color/48/uzbekistan.png"
   },
 ]
