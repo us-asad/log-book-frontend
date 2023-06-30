@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Collapse, Select } from 'antd';
 import { useParams } from 'react-router-dom';
 import { FaEdit, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa';
@@ -8,9 +8,21 @@ import { AiTwotoneCalendar } from 'react-icons/ai';
 import { MdSort } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { PageHeader } from '../../../components/common';
+import { getData } from '../../../utils/functions';
+import { Driver } from '../../../types';
 
-export default function Drivers() {
+export default function DriverPage() {
 	const params = useParams();
+	const [driver, setDriver] = useState<Driver | null>(null);
+	console.log(params, getData('drivers'));
+
+	useEffect(() => {
+		setDriver(
+			getData('drivers')?.find(
+				(driver: Driver) => driver.username === params.username
+			) || {}
+		);
+	}, []);
 
 	return (
 		<div>
@@ -31,7 +43,7 @@ export default function Drivers() {
 						<Button>
 							<Link
 								className="flex items-center gap-2 group"
-								to="/portal/drivers/testuser/edit"
+								to={`/portal/manage-drivers/edit/${driver?.username}`}
 							>
 								<span>Edit</span>
 								<FaEdit className="text-black-4 group-hover:text-inherit duration-75" />
@@ -43,20 +55,20 @@ export default function Drivers() {
 			<div className="flex items-center gap-3 py-3">
 				<Button className="flex items-center gap-2 px-3 py-2 rounded-md">
 					<FaPhoneAlt className="text-base" />
-					<span className="text-base">(718) 708-0945</span>
+					<span className="text-base">{driver?.phone}</span>
 				</Button>
 				<Button className="flex items-center gap-2 px-3 py-2 rounded-md">
 					<FaRegEnvelope className="text-base" />
-					<span className="text-base">akobir220kms</span>
+					<span className="text-base">{driver?.email}</span>
 				</Button>
 
 				<p className="flex items-center gap-2 border-b border-0 border-solid border-black-2  px-3 py-2">
 					<FiClock className="text-lg" />
-					<span className="text-sm">USA 70 hour / 8 day</span>
+					<span className="text-sm">{driver?.hosRule}</span>
 				</p>
 				<p className="flex items-center gap-2 border-b border-0 border-solid border-black-2  px-3 py-2">
 					<RiSmartphoneLine className="text-lg" />
-					<span className="text-sm">bc692355866ba777</span>
+					<span className="text-sm">{driver?.driverId}</span>
 				</p>
 			</div>
 
@@ -84,14 +96,14 @@ export default function Drivers() {
 								<td className="table-td text-center">
 									Jun 16, 2023 2:13 PM EDT
 								</td>
-								<td className="table-td text-center">220</td>
+								<td className="table-td text-center">{driver?.assignedVehicles}</td>
 								<td className="table-td text-center">
-									5mi NW from Bristol, PA
+									{driver?.location}
 								</td>
-								<td className="table-td text-center text-3xl">08:00</td>
-								<td className="table-td text-center text-3xl">11:00 </td>
-								<td className="table-td text-center text-3xl">14:00</td>
-								<td className="table-td text-center text-3xl">33:14</td>
+								<td className="table-td text-center text-xl">{driver?.restBreak}</td>
+								<td className="table-td text-center text-xl">{driver?.driveTime} </td>
+								<td className="table-td text-center text-xl">{driver?.restart}</td>
+								<td className="table-td text-center text-xl">{driver?.hosRule}</td>
 							</tr>
 						</tbody>
 					</table>

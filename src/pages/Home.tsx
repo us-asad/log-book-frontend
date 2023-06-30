@@ -5,7 +5,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/portal/vehicles");
+    navigate("/portal/drivers");
   }, []);
 
   return (

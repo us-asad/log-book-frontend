@@ -38,16 +38,12 @@ export default function AppRoutes() {
 			<Route path="/portal/">
 				<Route path="vehicles">
 					<Route path="" element={<Vehicles />} />
-					<Route path=":id">
-						<Route path="" element={<Vehicle />} />
-						<Route path="edit" element={<EditVehicle />} />
-					</Route>
+					<Route path=":id" element={<Vehicle />} />
 				</Route>
 				<Route path="drivers">
 					<Route path="" element={<Drivers />} />
-					<Route path=":id">
+					<Route path=":username">
 						<Route path="" element={<Driver />} />
-						<Route path="edit" element={<EditDriver />} />
 					</Route>
 				</Route>
 				<Route path="logs">
@@ -66,10 +62,12 @@ export default function AppRoutes() {
 				<Route path="manage-drivers">
 					<Route path="" element={<ManageDrivers />} />
 					<Route path="add" element={<AddDriver />} />
+					<Route path="edit/:username" element={<EditDriver />} />
 				</Route>
 				<Route path="manage-vehicles">
 					<Route path="" element={<ManageVehicles />} />
 					<Route path="add" element={<AddVehicle />} />
+					<Route path="edit/:id" element={<EditVehicle />} />
 				</Route>
 				<Route path="manage-groups">
 					<Route path="" element={<ManageGroups />} />
@@ -79,7 +77,7 @@ export default function AppRoutes() {
 				<Route path="manage-trackers" element={<ManageTrackers />} />
 				<Route path="company" element={<Company />} />
 
-				<Route path='profile/edit' element={<EditProfile />} />
+				<Route path="profile/edit" element={<EditProfile />} />
 			</Route>
 		</Routes>
 	);

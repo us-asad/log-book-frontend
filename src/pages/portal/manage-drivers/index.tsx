@@ -1,25 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Input, Select } from 'antd';
 import { MdSort } from 'react-icons/md';
-import { AiFillAndroid, AiOutlinePlus } from 'react-icons/ai';
+import { AiOutlinePlus } from 'react-icons/ai';
 import PageHeader from '../../../components/common/PageHeader';
 import { useNavigate } from 'react-router-dom';
+import { getData } from '../../../utils/functions';
+import { Driver } from '../../../types/index';
+import { NoRecords } from '../../../components/common';
 
 export default function ManageDrivers() {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
+	const [drivers, setDrivers] = useState([]);
+
+	useEffect(() => {
+		setDrivers(getData('drivers') || []);
+	}, []);
 
 	return (
 		<div>
 			<PageHeader
 				title="Manage Drivers"
 				buttons={
-					<Button onClick={() => navigate("/portal/manage-drivers/add")} className="flex items-center gap-1 group">
-            <span>Add Driver</span>
+					<Button
+						onClick={() => navigate('/portal/manage-drivers/add')}
+						className="flex items-center gap-1 group"
+					>
+						<span>Add Driver</span>
 						<AiOutlinePlus className="text-lg text-black-4 group-hover:text-inherit duration-50" />
 					</Button>
 				}
 			/>
-			<div className="overflow-auto max-h-[calc(100vh-200px)] border border-black-2 border-solid rounded-md mt-4 w-full">
+			<div className="relative overflow-auto h-[calc(100vh-200px)] border border-black-2 border-solid rounded-md mt-4 w-full">
 				<table className="w-max border-collapse">
 					<thead className="text-sm">
 						<tr>
@@ -35,12 +46,8 @@ export default function ManageDrivers() {
 									<Input size="small" placeholder="Search" className="w-full" />
 								</div>
 							</th>
-							<th className="table-th text-start">
-								Cycle
-							</th>
-							<th className="table-th text-start">
-								Groups
-							</th>
+							<th className="table-th text-start">Cycle</th>
+							<th className="table-th text-start">Groups</th>
 							<th className="table-th text-start">
 								<div className="flex flex-col gap-1">
 									<span>Assigned Vehicles</span>
@@ -48,9 +55,7 @@ export default function ManageDrivers() {
 								</div>
 							</th>
 
-							<th className="table-th text-start">
-								Sim Card
-							</th>
+							<th className="table-th text-start">Sim Card</th>
 							<th className="table-th text-start hover:bg-black-2 duration-150 cursor-pointer">
 								<button className="flex items-center gap-1">
 									<span>App Ver.</span>
@@ -93,38 +98,42 @@ export default function ManageDrivers() {
 						</tr>
 					</thead>
 					<tbody className="text-sm">
-						{[...new Array(20)].map((_, idx) => (
-							<tr key={idx}>
-								<td className="table-td">
-									Name1 Name2
-								</td>
-								<td className="table-td">
-									Username2
-								</td>
-								<td className="table-td">
-									USA 70 hour / 8 day
-								</td>
-								<td className="table-td"></td>
-								<td className="table-td">
-									576
-								</td>
-								<td className="table-td">
-									8901260295780568152
-								</td>
-								<td className="table-td">
-									2.22.25
-								</td>
-								<td className="table-td">
-									<div className="flex items-center gap-1">
+						{drivers.length ? (
+							drivers.map((driver: Driver) => (
+								<tr
+									key={driver.username}
+									className="table-tr-hoverable"
+									onClick={() =>
+										navigate(`/portal/manage-drivers/edit/${driver.username}`)
+									}
+								>
+									<td className="table-td">
+										{driver.firstName} {driver.lastName}
+									</td>
+									<td className="table-td">{driver.username}</td>
+									<td className="table-td">{driver.hosRule}</td>
+									<td className="table-td"></td>
+									<td className="table-td">{driver.assignedVehicles}</td>
+									<td className="table-td"></td>
+									<td className="table-td"></td>
+									<td className="table-td">
+										{/* <div className="flex items-center gap-1">
 										<AiFillAndroid className="text-green-600 text-lg" />
 										<span>13</span>
-									</div>
-								</td>
-								<td className="table-td">
-									Active
+									</div> */}
+									</td>
+									<td className="table-td">
+										{driver.status ? 'Active' : 'Inactive'}
+									</td>
+								</tr>
+							))
+						) : (
+							<tr>
+								<td>
+									<NoRecords text="No Drivers Found" />
 								</td>
 							</tr>
-						))}
+						)}
 					</tbody>
 				</table>
 			</div>

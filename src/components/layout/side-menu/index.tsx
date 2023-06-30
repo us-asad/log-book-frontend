@@ -22,13 +22,26 @@ import LinkItem from './LinkItem';
 import { HiChevronDown } from 'react-icons/hi';
 import { Button, Dropdown } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 export default function SideMenu() {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 	const profileDropDownItems = useMemo(
 		() => [
-			{ label: 'Account', key: 'account', onClick: () => navigate("/portal/profile/edit") },
-			{ label: 'Log out', key: 'logout', danger: true, onClick: () => navigate("/login") },
+			{
+				label: 'Account',
+				key: 'account',
+				onClick: () => navigate('/portal/profile/edit'),
+			},
+			{
+				label: 'Log out',
+				key: 'logout',
+				danger: true,
+				onClick: () => {
+					Cookies.remove('login');
+					navigate('/login');
+				},
+			},
 		],
 		[]
 	);
